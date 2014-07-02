@@ -21,6 +21,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 #include <Poco/AutoPtr.h>
 #include <Poco/Data/Session.h>
+#include <Poco/Logger.h>
+#include <Poco/SimpleFileChannel.h>
 #include <Poco/Util/IniFileConfiguration.h>
 
 #include "../rcon.h"
@@ -33,5 +35,12 @@ class AbstractExt
 		
 		Poco::AutoPtr<Poco::Util::IniFileConfiguration> pConf;
 		
-		Rcon rcon;
+		virtual void freeUniqueID_mutexlock(const int &unique_id)=0;
+		virtual int getUniqueID_mutexlock()=0;
+		
+		#ifdef TESTING
+			Rcon rcon;
+		#endif
+		#ifdef LOGGING
+		#endif
 };
