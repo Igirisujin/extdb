@@ -39,8 +39,8 @@ class AbstractProtocol
 	public:
 		AbstractProtocol();
 		virtual ~AbstractProtocol();
-		virtual std::string callProtocol(AbstractExt *extension, std::string input_str)=0;
-		virtual void init(AbstractExt *extension);
+		virtual void callProtocol(AbstractExt *extension, std::string input_str, std::string &result)=0;
+		virtual bool init(AbstractExt *extension);
 
 	#ifdef LOGGING
 		protected:
