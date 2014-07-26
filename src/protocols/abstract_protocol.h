@@ -22,13 +22,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include <Poco/Data/SessionPool.h>
 #include <boost/shared_ptr.hpp>
 
-#ifdef LOGGING
-	#include <boost/log/core.hpp>
-	#include <boost/log/trivial.hpp>
-	#include <boost/log/utility/setup/file.hpp>
-	#include <boost/log/sources/severity_logger.hpp>
-	#include <boost/log/sources/record_ostream.hpp>
-#endif
+#include <boost/log/core.hpp>
+#include <boost/log/trivial.hpp>
+#include <boost/log/utility/setup/file.hpp>
+#include <boost/log/sources/severity_logger.hpp>
+#include <boost/log/sources/record_ostream.hpp>
+
 #include <iostream>
 #include <cstdlib>
 

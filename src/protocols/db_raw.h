@@ -30,5 +30,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 class DB_RAW: public AbstractProtocol
 {
 	public:
+		bool init(AbstractExt *extension);
 		void callProtocol(AbstractExt *extension, std::string input_str, std::string &result);
 };
